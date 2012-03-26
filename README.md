@@ -1,4 +1,4 @@
-This gem uses [mechanize](https://github.com/tenderlove/mechanize) to scrape content from [shelfari.com](http://www.shelfari.com) and simulate an API, because currently there is no official one. Given the nature of obtaninig the data, things might break often, so use at your own risk.
+This gem uses [mechanize](https://github.com/tenderlove/mechanize) to scrape content from [shelfari.com](http://www.shelfari.com) and simulate an API, because currently there is no official one. Given the nature of obtaining the data, things might break often, so use at your own risk.
 
 ## Methods ##
 	
@@ -6,7 +6,7 @@ This gem uses [mechanize](https://github.com/tenderlove/mechanize) to scrape con
 
 
 ## Instalation ##
-
+  
 	gem install shelfari
 
 ## Usage ##
