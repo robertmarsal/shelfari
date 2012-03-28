@@ -22,4 +22,21 @@ class Shelfari
             :url => raw_book['href']]
     JSON.generate(book)
   end
+  
+  def search(title)
+	url = @@base_url+'/search/books?Keywords='+title.gsub(/\s/, '%20')
+	page = @agent.get(url)
+	results = Hash.new
+	raw_books = page.parser.xpath("//a[@class='book']").each{ |raw_book|
+	  if !results.has_key?(raw_book['bookid'])
+	    book = [:bookid => raw_book['bookid'],
+		        :title => raw_book.xpath(".//img").first['alt'],
+			    :url => raw_book['href']
+			   ]		
+	  
+	    results[raw_book['bookid']] = book
+	  end
+	}
+	return JSON.generate(results)
+  end
 end
