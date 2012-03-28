@@ -5,7 +5,7 @@ This gem uses [mechanize](https://github.com/tenderlove/mechanize) to scrape con
 	book(id) - returns information about a book based on id
 
 
-## Instalation ##
+## Installation ##
   
 	gem install shelfari
 
