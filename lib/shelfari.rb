@@ -19,7 +19,7 @@ class Shelfari
             :title => raw_book['title'],
             :author => author,
             :cover => raw_book.xpath(".//img").first['src'],
-            :page => raw_book['href']]
+            :url => raw_book['href']]
     JSON.generate(book)
   end
 end
