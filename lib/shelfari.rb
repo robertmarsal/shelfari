@@ -11,11 +11,15 @@ class Shelfari
   
   def book(id)
     url = @@base_url+'/books/'+id.to_s
-	raw_book = @agent.get(url).parser.xpath("//a[@bookid='"+id.to_s+"']").first
+	page =  @agent.get(url)
+	author = page.title.gsub(/(.*)by\s/, '')
+    raw_book = page.parser.xpath("//a[@bookid='"+id.to_s+"']").first
 	book = [:bookid => id.to_s, 
 	        :editionid => raw_book['editionid'], 
 			:title => raw_book['title'], 
-			:link => raw_book['href']]
+			:author => author,
+			:cover => raw_book.xpath(".//img").first['src'],
+			:page => raw_book['href']]
 	JSON.generate(book)
   end
 end
