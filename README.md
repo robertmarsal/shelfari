@@ -22,7 +22,7 @@ This gem uses [mechanize](https://github.com/tenderlove/mechanize) to scrape con
     	"title":"The Girl Who Kicked the Hornet's Nest",
     	"author":"Stieg Larsson",
     	"cover":"http://ecx.images-amazon.com/images/I/41BHhplwx0L._SL236.jpg",
-    	"page":"http://www.shelfari.com/books/5831441/The-Girl-Who-Kicked-the-Hornets-Nest"}]
+    	"url":"http://www.shelfari.com/books/5831441/The-Girl-Who-Kicked-the-Hornets-Nest"}]
 
 ## License ##
 
