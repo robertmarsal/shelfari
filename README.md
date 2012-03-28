@@ -81,7 +81,7 @@ This gem uses [mechanize](https://github.com/tenderlove/mechanize) to scrape con
             "url": "http://www.shelfari.com/books/25520226/The-Girl-with-the-Dragon-Tattoo-(A-BookCaps-Study-Guide)"
         }
     ]
-}
+    }
 
 ## License ##
 
