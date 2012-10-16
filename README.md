@@ -2,20 +2,23 @@
 
 This gem uses [mechanize](https://github.com/tenderlove/mechanize) to scrape content from [shelfari.com](http://www.shelfari.com) and simulate an API, because currently there is no official one. Given the nature of obtaining the data, things might break often, so use at your own risk.
 
-## Methods ##
+#### Methods
 ```ruby    
 book(id) #returns information about a book based on id
 search(title) #returns the first page of results
 ```
-## Installation ##
+#### Installation
 ```ruby
 gem install shelfari
 ```
-## Usage ##
+#### Usage
 ```ruby
 require 'shelfari'
     
 library = Shelfari.new
+```
+Get info about a book
+```ruby
 myBook = library.book(5831441)
 
 puts myBook
@@ -30,7 +33,9 @@ puts myBook
         "url": "http://www.shelfari.com/books/5831441/The-Girl-Who-Kicked-the-Hornets-Nest"
     }
   ]
-
+```
+Search a book
+```ruby
 mySearch = library.search('the girl with the dragon tatoo')
 
 puts mySearch
@@ -75,19 +80,21 @@ puts mySearch
     {
         "bookid": "22871867",
         "title": "The Psychology of the Girl With the Dragon Tattoo",
-        "url": "http://www.shelfari.com/books/22871867/The-Psychology-of-the-Girl-With-the-Dragon-Tattoo"
+        "url": "http://www.shelfari.com/books/22871867/The-Psychology-of-the-Girl-With-the-Dragon-
+                Tattoo"
     }
 ],
 "25520226": [
     {
         "bookid": "25520226",
         "title": "The Girl with the Dragon Tattoo (A BookCaps Study Guide)",
-        "url": "http://www.shelfari.com/books/25520226/The-Girl-with-the-Dragon-Tattoo-(A-BookCaps-Study-Guide)"
+        "url": "http://www.shelfari.com/books/25520226/The-Girl-with-the-Dragon-Tattoo-
+                (A-BookCaps-Study-Guide)"
     }
 ]
 }
 ```
 
-## License ##
+#### License
 
 This library is distributed under the MIT license.  Please see the LICENSE file.
