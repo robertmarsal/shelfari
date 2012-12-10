@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/robertboloc/shelfari.png)](https://travis-ci.org/robertboloc/shelfari)
+[![Code Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/robertboloc/shelfari)
 
 This gem uses [mechanize](https://github.com/tenderlove/mechanize) to scrape content from [shelfari.com](http://www.shelfari.com) and simulate an API, because currently there is no official one. Given the nature of obtaining the data, things might break often, so use at your own risk.
 
