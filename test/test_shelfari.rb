@@ -15,4 +15,11 @@ class ShelfariTest < Test::Unit::TestCase
     # check author
     assert testBook.include? 'Stieg Larsson'
   end
+
+  def test_user
+    testUser = @@library.user('robertboloc')
+
+    #check avatar
+    assert testUser.include? 'http://'
+  end
 end
