@@ -30,19 +30,19 @@ class Shelfari
   def user(username)
     url = @@base_url+'/'+username
     page = @agent.get(url)
+
+    desc = page.parser.at('meta[@name="description"]')
    
     user = [
-      :description => page.parser.at('meta[@name="description"]')[:content],
-      :avatar => page.parser.xpath("//a[@class='avatar']//img").first['src']
+      :description => desc ? desc[:content] : nil,
+      :avatar => page.parser.xpath("//a[@class='avatar']//img").first['src'],
+      :books => extract_books(page)
     ]
 
     JSON.generate(user)
   end
 
-  def search(title)
-    url = @@base_url+'/search/books?Keywords='+title.gsub(/\s/, '%20')
-    page = @agent.get(url)
-    
+  def extract_books(page)
     results = Hash.new
     raw_books = page.parser.xpath("//a[@class='book']").each{ |raw_book|
       if !results.has_key?(raw_book['bookid'])
@@ -55,7 +55,29 @@ class Shelfari
         results[raw_book['bookid']] = book
       end
     }
-
+    results
+  end
+ 
+  def search(title)
+    url = @@base_url+'/search/books?Keywords='+title.gsub(/\s/, '%20')
+    page = @agent.get(url)
+    results = extract_books(page)
     return JSON.generate(results)
+  end
+
+  def now_reading(user)
+    url = @@base_url+"/#{user}/lists/NowReading"
+    page = @agent.get(url)
+    page.parser.xpath("//script").each do |raw_script|
+      raw_script.children.each do |kid| 
+        if kid.content =~ /shelfPrePopulation/
+          # trim the front
+          val = kid.content.sub(/^[^{]*/,'')
+          # trim the back 
+          val.sub!(/;\s*$/, '')
+          return val
+        end
+      end
+    end
   end
 end
