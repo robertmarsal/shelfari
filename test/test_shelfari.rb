@@ -3,6 +3,8 @@ require 'shelfari'
 
 class ShelfariTest < Test::Unit::TestCase
   @@library = Shelfari.new
+  @@test_user = 'robertboloc'
+
   def test_book
     testBook = @@library.book(5831441)
 
@@ -17,9 +19,16 @@ class ShelfariTest < Test::Unit::TestCase
   end
 
   def test_user
-    testUser = @@library.user('robertboloc')
+    testUser = @@library.user(@@test_user)
 
     #check avatar
     assert testUser.include? 'http://'
+  end
+    
+  def test_now_reading
+    testNowReading = @@library.now_reading(@@test_user)
+
+    #check
+    assert testNowReading.include? 'books'
   end
 end
