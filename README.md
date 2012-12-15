@@ -7,6 +7,8 @@ This gem uses [mechanize](https://github.com/tenderlove/mechanize) to scrape con
 ```ruby    
 book(id) #returns information about a book based on id
 search(title) #returns the first page of results
+user(username) #returns user details
+now_reading(username) #returns the books the user is currently reading
 ```
 #### Installation
 ```ruby
