@@ -1,8 +1,6 @@
-require 'rubygems'
 require 'bundler/setup'
 require 'mechanize'
 require 'json'
-require 'pp'
 
 class Shelfari
   @@base_url = 'http://www.shelfari.com'
