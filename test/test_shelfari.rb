@@ -6,7 +6,7 @@ class ShelfariTest < Test::Unit::TestCase
   @@test_user = 'robertboloc'
 
   def test_book
-    testBook = @@library.book(5831441)
+    testBook = @@library.book_by_id(5831441)
 
     # check id
     assert testBook.include? '5831441' 
