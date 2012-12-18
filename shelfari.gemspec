@@ -9,8 +9,6 @@ Gem::Specification.new do |spec|
   spec.description = <<-EOF
     Simulates a basic API, as there is no official one (yet)
   EOF
-  spec.files = [
-	"lib/shelfari.rb"
-  ]
+  spec.files = `git ls-files`.split("\n")
   spec.require_paths = ["lib"]
 end
