@@ -1,5 +1,6 @@
-[![Code Climate](https://codeclimate.com/github/robertboloc/shelfari.png)](https://codeclimate.com/github/robertboloc/shelfari)  
-[![Build Status](https://travis-ci.org/robertboloc/shelfari.png)](https://travis-ci.org/robertboloc/shelfari)  
+[![Build Status](https://travis-ci.org/robertboloc/shelfari.png)](https://travis-ci.org/robertboloc/shelfari)
+[![Code Climate](https://codeclimate.com/github/robertboloc/shelfari.png)](https://codeclimate.com/github/robertboloc/shelfari)
+[![Gem Version](https://badge.fury.io/rb/shelfari.png)](http://badge.fury.io/rb/shelfari)
 
 This gem uses [mechanize](https://github.com/tenderlove/mechanize) to scrape content from [shelfari.com](http://www.shelfari.com) and simulate an API, because currently there is no official one. Given the nature of obtaining the data, things might break often, so use at your own risk.
 
