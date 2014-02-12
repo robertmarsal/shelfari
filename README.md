@@ -23,7 +23,7 @@ library = Shelfari.new
 ```
 Get info about a book
 ```ruby
-myBook = library.book(5831441)
+myBook = library.book_by_id(5831441)
 ```
 This returns the following JSON
 ```json
