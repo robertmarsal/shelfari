@@ -1,20 +1,20 @@
+# Shelfari
 [![Build Status](https://travis-ci.org/robertboloc/shelfari.png)](https://travis-ci.org/robertboloc/shelfari)
 [![Code Climate](https://codeclimate.com/github/robertboloc/shelfari.png)](https://codeclimate.com/github/robertboloc/shelfari)
 [![Gem Version](https://badge.fury.io/rb/shelfari.png)](http://badge.fury.io/rb/shelfari)
 
 This gem uses [mechanize](https://github.com/tenderlove/mechanize) to scrape content from [shelfari.com](http://www.shelfari.com) and simulate an API, because currently there is no official one. Given the nature of obtaining the data, things might break often, so use at your own risk.
 
-#### Methods
-```ruby
-book_by_id(id) #returns information about a book based on id
-book_by_isbn(isbn) #returns information about a book based on isbn
-user(username) #returns user details
-now_reading(username) #returns the books the user is currently reading
-```
-#### Installation
+## Table of contents
+- [Installation](#installation)
+- [Usage](#usage)
+- [Methods](#methods)
+
+### Installation
 ```ruby
 gem install shelfari
 ```
+
 #### Usage
 ```ruby
 require 'shelfari'
@@ -37,6 +37,10 @@ This returns the following JSON
 }
 ```
 
-#### License
-
-This library is distributed under the MIT license.  Please see the LICENSE file.
+#### Methods
+```ruby
+book_by_id(id) #returns information about a book based on id
+book_by_isbn(isbn) #returns information about a book based on isbn
+user(username) #returns user details
+now_reading(username) #returns the books the user is currently reading
+```
