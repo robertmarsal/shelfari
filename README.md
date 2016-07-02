@@ -1,4 +1,6 @@
 # Shelfari
+> This is now deprecated since Shelfari has merged with Goodreads.
+
 [![Build Status](https://travis-ci.org/robertboloc/shelfari.png)](https://travis-ci.org/robertboloc/shelfari)
 [![Code Climate](https://codeclimate.com/github/robertboloc/shelfari.png)](https://codeclimate.com/github/robertboloc/shelfari)
 [![Gem Version](https://badge.fury.io/rb/shelfari.png)](http://badge.fury.io/rb/shelfari)
